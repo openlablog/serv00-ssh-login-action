@@ -1,6 +1,6 @@
 ![](https://socialify.git.ci/openlablog/serv00-ssh-login-action/image?description=1&font=Inter&forks=1&issues=1&language=1&name=1&owner=1&pattern=Solid&pulls=1&stargazers=1&theme=Light)
 
-# 注意：请使用私有仓库部署！请使用私有仓库部署！请使用私有仓库部署！
+## 注意：请使用私有仓库部署！请使用私有仓库部署！请使用私有仓库部署！
 
 ## 功能
 
@@ -85,3 +85,19 @@ test2@s2.serv00.com 登录失败 Authentication failed.
 ## 定时执行cron任务
 
 上传到github私有仓库后，点击action，选择脚本，点击run workflow运行一次，才能触发定时执行
+
+corn修改 .github/workflows/serv00-ssh-login-action.py.yml 或 .github/workflows/serv00-ssh-login-action.sh.yml
+
+```yml
+name: serv00-ssh-login-action.py
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # 每天一次
+    # - cron: '0 0 * * 0' #每周日一次
+  workflow_dispatch: # 支持手动执行
+
+jobs:
+  serv00-ssh-login-action:
+...
+```
