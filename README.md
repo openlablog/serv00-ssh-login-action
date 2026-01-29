@@ -84,8 +84,6 @@ test2@s2.serv00.com 登录失败 Authentication failed.
 
 ## 定时执行cron任务
 
-上传到github私有仓库后，点击action，选择脚本，点击run workflow运行一次，才能触发定时执行
-
 corn修改 .github/workflows/serv00-ssh-login-action.py.yml 或 .github/workflows/serv00-ssh-login-action.sh.yml
 
 ```yml
@@ -101,3 +99,5 @@ jobs:
   serv00-ssh-login-action:
 ...
 ```
+
+上传到github私有仓库后，点击action，选择脚本，点击run workflow运行一次，才能触发定时执行
