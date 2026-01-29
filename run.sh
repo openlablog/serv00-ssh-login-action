@@ -8,7 +8,7 @@ try_login() {
     local password="$4"
     local pkey="$5"
 
-    if [ $pkey != "" ]; then
+    if [ "$pkey" != "" ]; then
         sshpass -p "$password" ssh \
             -p "$port" \
             -i "$(cd "$(dirname "$0")" && pwd)/$pkey" "$username@$hostname" \
